@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | Da-Lary Gym & Fitness Center</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="icon" type="image/svg+xml" href="fav-icon-01.svg">
+  <link rel="icon" type="image/png" href="fav-icon-01.png">
+
+</head>
+<body>
+  <div class="mother-container">
+
+  <div class="logo-container">
+    <div class="logo">
+      <img src="LOGO.svg" alt="Logo">
+    </div>
+
+    <form id="registrationForm" class="form-container">
+      <h2>REGISTRATION</h2>
+
+<div class="boxOne">
+
+  <div class="selector">
+  <label for="package">Select Package</label>
+  <select id="package" name="package">
+    <option value=" ">Select</option>
+    <option value="group">Group</option>
+    <option value="couple">Couple</option>
+    <option value="single">Single</option>
+    <option value="adult- day pass">Adult- Day Pass</option>
+    <option value="child- swimming pool only:day pass">Child- Swimming Pool only:Day Pass</option>
+  </select>
+  <span class="error" id="packageError"></span>
+</div>
+
+<div class="selector">
+  <label for="period">Select Period</label>
+  <select id="period" name="period">
+    <option value=" ">Select</option>
+    <option value="monthly (tzs323,500.00)">Monthly (TZS323,500.00)</option>
+    <option value="quarterly (tzs925,800.00)">Quarterly (TZS925,800.00)</option>
+    <option value="half year (tzs1,740,000.00)">Half Year TZS1,740,000.00)</option>
+    <option value="annual (tzs3,257,000.00)">Annual (TZS3,257,000.00)</option>
+  </select>
+  <span class="error" id="periodError"></span>
+</div>
+</div>
+
+<div class="boxTwo">
+
+  <div class="selector2">
+  <label for="startDate">Start Date</label>
+  <input type="date" id="startDate" name="startDate">
+  <span class="error" id="startDateError"></span>
+</div>
+
+<div class="selector2">
+
+  <label for="time">Select Time</label>
+    <select id="timeSelector" name="timeSelector" required>
+    <option value="select">Select</option>
+    <option value="11:30:00">11:30:00</option>
+    <option value="11:45:00">11:45:00</option>
+    <option value="12:00:00">12:00:00</option>
+    <option value="12:15:00">12:15:00</option>
+    <option value="12:30:00">12:30:00</option>
+    <option value="13:00:00">13:00:00</option>
+    <option value="13:15:00">13:15:00</option>
+    <option value="13:30:00">13:30:00</option>
+    <option value="13:45:00">13:45:00</option>
+    <option value="14:00:00">14:00:00</option>
+    <option value="14:15:00">14:15:00</option>
+    <option value="14:30:00">14:30:00</option>
+    <option value="14:45:00">14:45:00</option>
+    <option value="15:00:00">15:00:00</option>
+    <option value="15:15:00">15:15:00</option>
+    <option value="15:30:00">15:30:00</option>
+    <option value="15:45:00">15:45:00</option>
+    <option value="16:00:00">16:00:00</option>
+    <option value="16:15:00">16:15:00</option>
+    <option value="16:30:00">16:30:00</option>
+    <option value="16:45:00">16:45:00</option>
+    <option value="17:00:00">17:00:00</option>
+    <option value="17:15:00">17:15:00</option>
+    <option value="17:30:00">17:30:00</option>
+    <option value="17:45:00">17:45:00</option>
+    <option value="18:00:00">18:00:00</option>
+    <option value="18:15:00">18:15:00</option>
+    <option value="18:30:00">18:30:00</option>
+    <option value="18:45:00">18:45:00</option>
+    <option value="19:00:00">19:00:00</option>
+    <option value="19:15:00">19:15:00</option>
+    <option value="19:30:00">19:30:00</option>
+    <option value="19:45:00">19:45:00</option>
+    <option value="20:00:00">20:00:00</option>
+    <option value="20:15:00">20:15:00</option>
+    <option value="20:30:00">20:30:00</option>
+  </select>
+  <span class="error" id="timeError"></span>
+</div>
+</div>
+
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName">
+  <span class="error" id="firstNameError"></span>
+
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName">
+  <span class="error" id="lastNameError"></span>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email">
+  <span class="error" id="emailError"></span>
+
+  <label for="phone">Phone Number</label>
+  <input type="text" id="phone" name="phone">
+  <span class="error" id="phoneError"></span>
+
+  <button type="submit">REGISTER</button>
+</form>
+
+  </div>
+  </div>
+
+  <script>
+          document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      let isValid = true;
+
+      const fields = ["package", "period", "startDate", "firstName", "lastName", "email", "phone"];
+
+      fields.forEach(field => {
+        const input = document.getElementById(field);
+        const error = document.getElementById(field + "Error");
+        if (!input.value.trim()) {
+          error.textContent = "This field is required";
+          isValid = false;
+        } else {
+          error.textContent = "";
+        }
+      });
+
+      const email = document.getElementById("email").value;
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("emailError").textContent = "Email Address is Invalid!";
+        isValid = false;
+      }
+
+      const phone = document.getElementById("phone");
+      const phoneVal = phone.value.replace(/\s+/g, '');
+      if (phoneVal.startsWith("0")) {
+        phone.value = "+255" + phoneVal.slice(1);
+      }
+      if (!/^\+255[0-9]{9}$/.test(phone.value)) {
+        document.getElementById("phoneError").textContent = "Invalid phone number";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Registration successfully!");
+        form.reset();
+      }
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@media (max-width: 480px) {
+.heading-body {
+  font-size: 2.2rem;
+  text-align: justify;
+}
+button {
+  padding: 0.5rem 2rem;
+  font-size: 15px;
+}
+.h1-sec2 {
+  font-size: 1.5rem;
+}
+.para-sec2 {
+  font-size: 1rem;
+}
+.icon i {
+  font-size: 1.5rem;
+}
+.contact-header {
+  font-size: 1.5rem;
+}
+.contact-info ul {
+  font-size: 1rem;
+}
+.contact-info ul li i {
+  font-size: 1rem;
+  padding: 10px;
+}
+.h1-3 {
+  font-size: 1.5rem;
+}
+.psec-3 {
+  font-size: 1rem;
+  padding: 2px;
+}
+table {
+  cursor: text;
+  width: 100%;
+}
+table:hover {
+  display: block;
+  transform: none !important;
+}
+.span1 {
+  font-size: 12px;
+}
+.bar {
+  margin-bottom: 0;
+}
+.bar p{
+  text-align: center;
+  font-size: 9px;
+}
+}
+
+
+@media (max-width: 321px) {
+.heading-body {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.button {
+  padding:5px;
+}
+button {
+  padding: 0.5rem 2rem;
+  font-size: 15px;
+}
+.para1 {
+  font-size: 1.2rem;
+}
+.h1-sec2 {
+  font-size: 1rem;
+}
+.para-sec2 {
+  font-size: 0.7rem;
+}
+.icon i {
+  font-size: 1rem;
+}
+.contact-header {
+  font-size: 1rem;
+}
+.contact-info ul {
+  font-size: 0.7rem;
+}
+.contact-info ul li i {
+  font-size: 0.7rem;
+  padding: 5px;
+}
+.h1-3 {
+  padding: 1px;
+  font-size: 1rem;
+}
+.psec-3 {
+  font-size: 0.7rem;
+  padding: 0;
+}
+table {
+  font-size: 0.3rem;
+  cursor: text;
+  width: 100%;
+}
+table:hover {
+  display: block;
+  transform: none !important;
+}
+.note p {
+  font-size: 0.5rem;
+}
+.span1 {
+  font-size: 8px;
+}
+.bar {
+  margin-bottom: 0;
+}
+.bar p{
+  text-align: center;
+  font-size: 8px;
+}
+}

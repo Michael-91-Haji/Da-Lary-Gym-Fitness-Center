@@ -1,0 +1,146 @@
+* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        scroll-behavior: smooth;
+}
+body {
+        background-image: url(cover-6.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: Montserrat, Lato, sans-serif;
+        height: 100vh;
+}
+body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+}
+
+
+.mother-container {
+        display: flex;
+        flex-direction: column;
+}
+.boxOne {
+        display: flex;
+        gap: 20px;
+}
+.boxTwo {
+        display: flex;
+        gap: 20px;
+}
+
+.selector {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+}
+.selector2 {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.logo {
+        display: block;
+        width: 50%;
+}
+
+.logo {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: flyIn 1s ease-out forwards;
+  animation-delay: 2s;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@keyframes flyIn {
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 600px;
+  margin: auto;
+}
+
+h2 {
+        color: yellow;
+        font-size: 2rem;
+}
+label {
+  color: white;
+  font-size: 18px;
+}
+
+input, select {
+  color: white;
+  font-size: 16px;
+  font-family: Montserrat;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #00bfff;
+  border-radius: 5px;
+}
+select option {
+        background-color: black;
+        font-family: Montserrat;
+        color: yellow;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        opacity: 0;
+}
+input[type="date"]::-moz-calendar-picker-indicator {
+        opacity: 0;
+}
+input[type="date"] {
+        background: url(date-svgrepo-com.svg) no-repeat right 10px center;
+        background-size: 20px 20px;
+}
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+button {
+  width: 60%;
+  padding: 10px;
+  background-color: black;
+  color: yellow;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  transform: translateY(10px);
+}
+
+.logo {
+    margin-bottom: 0;
+  }
+}
