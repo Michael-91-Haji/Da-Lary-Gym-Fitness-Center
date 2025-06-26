@@ -123,7 +123,7 @@ input[type="date"] {
 }
 
 button {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   background-color: black;
   color: yellow;
