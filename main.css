@@ -57,10 +57,6 @@ body {
 	background: #A00518;
 	color: white;
 }
-.nav i:active {
-	background: navy;
-}
-
 header {
 	display: flex;
 	align-items: center;
